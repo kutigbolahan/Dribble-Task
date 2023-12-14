@@ -29,19 +29,41 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.white,
                     ),
                     const Spacer(),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8.0),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(24, 40, 66, 1),
-                            borderRadius: BorderRadius.circular(30)),
-                        child: const Icon(
-                          CupertinoIcons.bell,
-                          color: Colors.white,
+                    Stack(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                                color: const Color.fromRGBO(24, 40, 66, 1),
+                                borderRadius: BorderRadius.circular(30)),
+                            child: const Icon(
+                              CupertinoIcons.bell,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
+                        // Positioned(
+                        //   top: 26,
+                        //   left: 15,
+                        //   child: Container(
+                        //     // height: 10,
+                        //     width: 40,
+                        //     decoration: BoxDecoration(
+                        //         color: Color.fromRGBO(93, 139, 255, 1),
+                        //         borderRadius: BorderRadius.circular(30)),
+                        //     child: const Center(
+                        //       child: Text('12',
+                        //           style: TextStyle(
+                        //               color: Colors.white,
+                        //               fontSize: 12,
+                        //               fontWeight: FontWeight.bold)),
+                        //     ),
+                        //   ),
+                        // ),
+                      ],
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
@@ -90,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text("75% Done",
                             style: TextStyle(
@@ -265,32 +287,32 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                     Text('Wed',
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                     Text('Thu',
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                     Text('Fri',
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                     Text('Sat',
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                     Text('Sun',
                         style: TextStyle(
                             color: Color.fromRGBO(195, 213, 248, 0.7),
                             fontSize: 15,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w400)),
                   ],
                 ),
                 const SizedBox(
@@ -304,8 +326,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 const TaskWidget(
                     time: '2h 45m',
                     color: Color.fromRGBO(254, 249, 112, 1),
-                    smallText: 'Swwet Home',
-                    bigText: 'Grocery Sgopping'),
+                    smallText: 'Sweet Home',
+                    bigText: 'Grocery Shopping'),
                 const TaskWidget(
                     time: '3h 59m',
                     color: Colors.white,
@@ -316,7 +338,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromRGBO(93, 139, 255, 1),
         onPressed: () {},
