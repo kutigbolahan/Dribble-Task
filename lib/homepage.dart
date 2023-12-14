@@ -18,324 +18,301 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Row(
-                children: [
-                  const Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(24, 40, 66, 1),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: const Icon(
-                        CupertinoIcons.bell,
-                        color: Colors.white,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                    const Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(24, 40, 66, 1),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: const Icon(
+                          CupertinoIcons.bell,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(24, 40, 66, 1),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: const Icon(
-                        CupertinoIcons.add,
-                        color: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(24, 40, 66, 1),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: const Icon(
+                          CupertinoIcons.add,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              const Text('Good\nMorning',
-                  style: TextStyle(
-                    color: Color.fromRGBO(93, 139, 255, 1),
-                    fontSize: 54,
-                    fontWeight: FontWeight.bold,
-                  )),
-              const SizedBox(
-                height: 10,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Today's Monday",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold)),
-                      Text('Dec 12,2023',
-                          style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("75% Done",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold)),
-                      Text('Completed task',
-                          style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Row(
-                children: [
-                  Container(
-                    height: 25,
-                    width: 30,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: const Center(
-                      child: Text('12',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text('Tasks',
-                      style: TextStyle(
-                          color: Color.fromRGBO(93, 139, 255, 0.7),
-                          fontSize: 28,
-                          fontWeight: FontWeight.w400)),
-                  const Spacer(),
-                  Container(
-                    height: 25,
-                    width: 25,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(
-                          color: const Color.fromRGBO(195, 213, 248, 0.7),
-                        )),
-                    child: const Center(
-                      child: Text('3',
-                          style: TextStyle(
-                              color: Color.fromRGBO(195, 213, 248, 0.7),
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text('Boards',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 28,
-                          fontWeight: FontWeight.w400)),
-                ],
-              ),
-              const SizedBox(
-                height: 7,
-              ),
-              const SizedBox(
-                height: 2,
-                child: LinearProgressIndicator(
-                  backgroundColor: Color.fromRGBO(195, 213, 248, 0.7),
-                  value: 0.5,
-                  color: Colors.white,
+                  ],
                 ),
-              ),
-              const SizedBox(
-                height: 18,
-              ),
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    height: 35,
-                    // width: 0,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(
-                          color: const Color.fromRGBO(195, 213, 248, 0.7),
-                        )),
-                    child: Center(
-                        child: Row(
+                const SizedBox(
+                  height: 50,
+                ),
+                const Text('Good\nMorning',
+                    style: TextStyle(
+                      color: Color.fromRGBO(93, 139, 255, 1),
+                      fontSize: 54,
+                      fontWeight: FontWeight.bold,
+                    )),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          height: 20,
-                          width: 20,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color.fromRGBO(93, 139, 255, 1),
-                          ),
-                          child: const Center(
-                            child: Text('0',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold)),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 7,
-                        ),
-                        const Text('Boards',
+                        Text("Today's Monday",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400)),
-                      ],
-                    )),
-                  ),
-                  const Spacer(),
-                  Container(
-                    height: 30,
-                    width: 70,
-                    padding: const EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromRGBO(93, 139, 255, 1),
-                    ),
-                    child: const Center(
-                      child: Text('Active',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400)),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(2),
-                    height: 30,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: const Color.fromRGBO(93, 139, 255, 1),
-                        )),
-                    child: const Center(
-                      child: Text('Done',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600)),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Mon',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Tue',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Wed',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Thu',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Fri',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Sat',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                  Text('Sun',
-                      style: TextStyle(
-                          color: Color.fromRGBO(195, 213, 248, 0.7),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold)),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                height: 60,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromRGBO(156, 236, 254, 1),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(CupertinoIcons.person),
-                        const Spacer(),
-                        const Text('1h 30m',
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold)),
+                        Text('Dec 12,2023',
                             style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500)),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        Container(
-                          height: 30,
-                          //  width: 6,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.grey.withOpacity(0.3),
-                          ),
-                          child: const Icon(
-                            Icons.check,
-                            color: Colors.black,
-                            size: 15,
-                          ),
-                        )
+                                color: Colors.grey,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("75% Done",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold)),
+                        Text('Completed task',
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold)),
                       ],
                     )
                   ],
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      height: 25,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: const Center(
+                        child: Text('12',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    const Text('Tasks',
+                        style: TextStyle(
+                            color: Color.fromRGBO(93, 139, 255, 0.7),
+                            fontSize: 28,
+                            fontWeight: FontWeight.w400)),
+                    const Spacer(),
+                    Container(
+                      height: 25,
+                      width: 25,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                            color: const Color.fromRGBO(195, 213, 248, 0.7),
+                          )),
+                      child: const Center(
+                        child: Text('3',
+                            style: TextStyle(
+                                color: Color.fromRGBO(195, 213, 248, 0.7),
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    const Text('Boards',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 28,
+                            fontWeight: FontWeight.w400)),
+                  ],
+                ),
+                const SizedBox(
+                  height: 7,
+                ),
+                const SizedBox(
+                  height: 2,
+                  child: LinearProgressIndicator(
+                    backgroundColor: Color.fromRGBO(195, 213, 248, 0.7),
+                    value: 0.5,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 18,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(6),
+                      height: 35,
+                      // width: 0,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                            color: const Color.fromRGBO(195, 213, 248, 0.7),
+                          )),
+                      child: Center(
+                          child: Row(
+                        children: [
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromRGBO(93, 139, 255, 1),
+                            ),
+                            child: const Center(
+                              child: Text('0',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 7,
+                          ),
+                          const Text('Boards',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400)),
+                        ],
+                      )),
+                    ),
+                    const Spacer(),
+                    Container(
+                      height: 30,
+                      width: 70,
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: const Color.fromRGBO(93, 139, 255, 1),
+                      ),
+                      child: const Center(
+                        child: Text('Active',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400)),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(2),
+                      height: 30,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: const Color.fromRGBO(93, 139, 255, 1),
+                          )),
+                      child: const Center(
+                        child: Text('Done',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Mon',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Tue',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Wed',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Thu',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Fri',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Sat',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    Text('Sun',
+                        style: TextStyle(
+                            color: Color.fromRGBO(195, 213, 248, 0.7),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const TaskWidget(
+                    time: '1h 30m',
+                    color: Color.fromRGBO(156, 236, 254, 0.9),
+                    smallText: 'Myself',
+                    bigText: 'Walk My Dog'),
+                const TaskWidget(
+                    time: '2h 45m',
+                    color: Color.fromRGBO(254, 249, 112, 1),
+                    smallText: 'Swwet Home',
+                    bigText: 'Grocery Sgopping'),
+                const TaskWidget(
+                    time: '3h 59m',
+                    color: Colors.white,
+                    smallText: 'Work',
+                    bigText: 'Business Meeting'),
+              ],
+            ),
           ),
         ),
       ),
@@ -348,6 +325,76 @@ class _MyHomePageState extends State<MyHomePage> {
           Icons.add,
           color: Colors.white,
         ),
+      ),
+    );
+  }
+}
+
+class TaskWidget extends StatelessWidget {
+  const TaskWidget({
+    super.key,
+    required this.time,
+    required this.color,
+    required this.smallText,
+    required this.bigText,
+  });
+  final String time;
+  final Color color;
+  final String smallText;
+  final String bigText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(15),
+      height: 135,
+      width: MediaQuery.of(context).size.width,
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.circular(36), color: color),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(CupertinoIcons.person),
+              const Spacer(),
+              Text(time,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold)),
+              const SizedBox(
+                width: 7,
+              ),
+              Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.grey.withOpacity(0.3),
+                ),
+                child: const Icon(
+                  Icons.check,
+                  color: Colors.black,
+                  size: 15,
+                ),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Text(smallText,
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400)),
+          Text(bigText,
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w400)),
+        ],
       ),
     );
   }
