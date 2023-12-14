@@ -320,21 +320,51 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                const TaskWidget(
-                    time: '1h 30m',
-                    color: Color.fromRGBO(156, 236, 254, 0.9),
-                    smallText: 'Myself',
-                    bigText: 'Walk My Dog'),
-                const TaskWidget(
+                TaskWidget(
+                  time: '1h 30m',
+                  color: Color.fromRGBO(156, 236, 254, 0.9),
+                  smallText: 'Myself',
+                  bigText: 'Walk My Dog',
+                  image: ClipOval(
+                      child: Image.asset(
+                    'assets/images/image2.jpeg',
+                    width: 40,
+                    height: 40,
+                  )),
+                ),
+                TaskWidget(
                     time: '2h 45m',
                     color: Color.fromRGBO(254, 249, 112, 1),
                     smallText: 'Sweet Home',
-                    bigText: 'Grocery Shopping'),
-                const TaskWidget(
-                    time: '3h 59m',
-                    color: Colors.white,
-                    smallText: 'Work',
-                    bigText: 'Business Meeting'),
+                    bigText: 'Grocery Shopping',
+                    image: Row(
+                      children: [
+                        ClipOval(
+                            child: Image.asset(
+                          'assets/images/image3.jpeg',
+                          width: 40,
+                          height: 40,
+                        )),
+                        ClipOval(
+                            child: Image.asset(
+                          'assets/images/image2.jpeg',
+                          width: 40,
+                          height: 40,
+                        )),
+                      ],
+                    )),
+                TaskWidget(
+                  time: '3h 59m',
+                  color: Colors.white,
+                  smallText: 'Work',
+                  bigText: 'Business Meeting',
+                  image: ClipOval(
+                      child: Image.asset(
+                    'assets/images/image1.jpeg',
+                    width: 40,
+                    height: 40,
+                  )),
+                ),
               ],
             ),
           ),
@@ -363,17 +393,19 @@ class TaskWidget extends StatelessWidget {
     required this.color,
     required this.smallText,
     required this.bigText,
+    required this.image,
   });
   final String time;
   final Color color;
   final String smallText;
   final String bigText;
+  final Widget image;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
-      height: 135,
+      height: 140,
       width: MediaQuery.of(context).size.width,
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(36), color: color),
@@ -382,7 +414,7 @@ class TaskWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(CupertinoIcons.person),
+              image,
               const Spacer(),
               Text(time,
                   style: const TextStyle(
