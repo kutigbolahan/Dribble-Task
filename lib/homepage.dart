@@ -24,10 +24,12 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 Row(
                   children: [
-                    const Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
+                    ClipOval(
+                        child: Image.asset(
+                      'assets/images/image2.jpeg',
+                      width: 50,
+                      height: 50,
+                    )),
                     const Spacer(),
                     Stack(
                       children: [
