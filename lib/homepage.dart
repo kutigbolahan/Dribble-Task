@@ -340,6 +340,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+        elevation: 40,
         backgroundColor: const Color.fromRGBO(93, 139, 255, 1),
         onPressed: () {},
         tooltip: 'Add',
