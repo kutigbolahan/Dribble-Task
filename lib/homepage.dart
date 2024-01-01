@@ -585,13 +585,13 @@ class TaskWidget extends StatelessWidget {
 class BoardsWidget extends StatelessWidget {
   const BoardsWidget({
     super.key,
-    required this.time,
+    //  required this.time,
     required this.color,
     required this.smallText,
     required this.bigText,
     required this.image,
   });
-  final String time;
+  // final String time;
   final Color color;
   final String smallText;
   final String bigText;
@@ -610,29 +610,25 @@ class BoardsWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              image,
-              const Spacer(),
-              Text(time,
-                  style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold)),
-              const SizedBox(
-                width: 7,
-              ),
               Container(
-                height: 30,
-                width: 30,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.grey.withOpacity(0.3),
                 ),
                 child: const Icon(
-                  Icons.check,
+                  Icons.add,
                   color: Colors.black,
                   size: 15,
                 ),
-              )
+              ),
+              image,
+              const Spacer(),
+              Icon(Icons.more_horiz),
+              const SizedBox(
+                width: 7,
+              ),
             ],
           ),
           const SizedBox(

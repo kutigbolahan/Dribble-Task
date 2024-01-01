@@ -12,11 +12,11 @@ class BoardsScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TaskWidget(
-                time: '1h 30m',
+              BoardsWidget(
+                //  time: '1h 30m',
                 color: const Color.fromRGBO(156, 236, 254, 0.9),
-                smallText: 'Myself',
-                bigText: 'Walk My Dog',
+                smallText: '2 Active Task',
+                bigText: 'Myself',
                 image: ClipOval(
                     child: Image.asset(
                   'assets/images/image2.jpeg',
@@ -33,11 +33,11 @@ class BoardsScreen extends StatelessWidget {
                   //   ),
                   // );
                 },
-                child: TaskWidget(
-                    time: '2h 45m',
+                child: BoardsWidget(
+                    //  time: '2h 45m',
                     color: const Color.fromRGBO(254, 249, 112, 1),
-                    smallText: 'Sweet Home',
-                    bigText: 'Grocery Shopping',
+                    smallText: '4 Active Tasks',
+                    bigText: 'Sweet Home',
                     image: Row(
                       children: [
                         ClipOval(
@@ -55,18 +55,46 @@ class BoardsScreen extends StatelessWidget {
                       ],
                     )),
               ),
-              TaskWidget(
-                time: '3h 59m',
-                color: Colors.white,
-                smallText: 'Work',
-                bigText: 'Business Meeting',
-                image: ClipOval(
-                    child: Image.asset(
-                  'assets/images/image1.jpeg',
-                  width: 40,
-                  height: 40,
-                )),
-              ),
+              BoardsWidget(
+                  //  time: '3h 59m',
+                  color: Colors.white,
+                  smallText: '6 Active Tasks',
+                  bigText: 'Work',
+                  image: Row(
+                    children: [
+                      ClipOval(
+                          child: Image.asset(
+                        'assets/images/image2.jpeg',
+                        width: 40,
+                        height: 40,
+                      )),
+                      ClipOval(
+                          child: Image.asset(
+                        'assets/images/image3.jpeg',
+                        width: 40,
+                        height: 40,
+                      )),
+                      ClipOval(
+                          child: Image.asset(
+                        'assets/images/image2.jpeg',
+                        width: 40,
+                        height: 40,
+                      )),
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.black),
+                        child: const Center(
+                          child: Text('+3',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500)),
+                        ),
+                      )
+                    ],
+                  )),
             ],
           ),
         ),
