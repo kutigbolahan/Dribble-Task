@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task/homePage_details.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -332,27 +333,36 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 40,
                   )),
                 ),
-                TaskWidget(
-                    time: '2h 45m',
-                    color: Color.fromRGBO(254, 249, 112, 1),
-                    smallText: 'Sweet Home',
-                    bigText: 'Grocery Shopping',
-                    image: Row(
-                      children: [
-                        ClipOval(
-                            child: Image.asset(
-                          'assets/images/image3.jpeg',
-                          width: 40,
-                          height: 40,
-                        )),
-                        ClipOval(
-                            child: Image.asset(
-                          'assets/images/image2.jpeg',
-                          width: 40,
-                          height: 40,
-                        )),
-                      ],
-                    )),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const HomePageDetails(),
+                      ),
+                    );
+                  },
+                  child: TaskWidget(
+                      time: '2h 45m',
+                      color: Color.fromRGBO(254, 249, 112, 1),
+                      smallText: 'Sweet Home',
+                      bigText: 'Grocery Shopping',
+                      image: Row(
+                        children: [
+                          ClipOval(
+                              child: Image.asset(
+                            'assets/images/image3.jpeg',
+                            width: 40,
+                            height: 40,
+                          )),
+                          ClipOval(
+                              child: Image.asset(
+                            'assets/images/image2.jpeg',
+                            width: 40,
+                            height: 40,
+                          )),
+                        ],
+                      )),
+                ),
                 TaskWidget(
                   time: '3h 59m',
                   color: Colors.white,
