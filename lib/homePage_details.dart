@@ -43,13 +43,13 @@ class HomePageDetails extends StatelessWidget {
                 height: 30,
               ),
               Container(
-                padding: EdgeInsets.all(2),
+                padding: const EdgeInsets.all(2),
                 width: 100,
                 height: 30,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(color: Colors.black)),
-                child: Center(
+                child: const Center(
                   child: Text('Sweet Home',
                       style: TextStyle(
                         color: Colors.black,
@@ -68,11 +68,12 @@ class HomePageDetails extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   )),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Time Left',
@@ -94,7 +95,86 @@ class HomePageDetails extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           )),
                     ],
+                  ),
+                  Column(
+                    children: [
+                      const Text('Assignee',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          )),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        children: [
+                          ClipOval(
+                              child: Image.asset(
+                            'assets/images/image2.jpeg',
+                            width: 40,
+                            height: 40,
+                          )),
+                          ClipOval(
+                              child: Image.asset(
+                            'assets/images/image3.jpeg',
+                            width: 40,
+                            height: 40,
+                          )),
+                        ],
+                      ),
+                    ],
                   )
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text('Additional Description',
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.5),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                  'We have to buy some tresh bread, fruit, and \nvegetables.Supply of water Is running out.',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                  )),
+              const SizedBox(
+                height: 30,
+              ),
+              Text('Created ',
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.5),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  )),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                children: [
+                  const Text('Dec 10, by Matt',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                      )),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  ClipOval(
+                      child: Image.asset(
+                    'assets/images/image3.jpeg',
+                    width: 20,
+                    height: 20,
+                  )),
                 ],
               )
             ],
