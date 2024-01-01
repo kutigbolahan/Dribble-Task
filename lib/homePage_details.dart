@@ -7,6 +7,42 @@ class HomePageDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.yellow,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Container(
+              width: 50,
+              height: 50,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.black),
+              child: const Icon(
+                CupertinoIcons.arrow_down,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Container(
+              width: 50,
+              height: 50,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.black),
+              child: const Icon(
+                Icons.more_horiz,
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
       backgroundColor: Colors.yellow,
       body: SafeArea(
         child: Padding(
@@ -14,31 +50,31 @@ class HomePageDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black),
-                    child: const Icon(
-                      CupertinoIcons.arrow_down,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black),
-                    child: const Icon(
-                      Icons.more_horiz,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Container(
+              //       width: 50,
+              //       height: 50,
+              //       decoration: const BoxDecoration(
+              //           shape: BoxShape.circle, color: Colors.black),
+              //       child: const Icon(
+              //         CupertinoIcons.arrow_down,
+              //         color: Colors.white,
+              //       ),
+              //     ),
+              //     Container(
+              //       width: 50,
+              //       height: 50,
+              //       decoration: const BoxDecoration(
+              //           shape: BoxShape.circle, color: Colors.black),
+              //       child: const Icon(
+              //         Icons.more_horiz,
+              //         color: Colors.white,
+              //       ),
+              //     )
+              //   ],
+              // ),
               const SizedBox(
                 height: 30,
               ),

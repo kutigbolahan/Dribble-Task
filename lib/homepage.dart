@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:task/homePage_details.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -15,10 +16,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   scrolledUnderElevation: 0.0,
+      //   backgroundColor: const Color.fromRGBO(16, 28, 46, 1),
+      // ),
       backgroundColor: const Color.fromRGBO(16, 28, 46, 1),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.only(left: 15.0, right: 15),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -335,11 +340,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const HomePageDetails(),
-                      ),
-                    );
+                    Navigator.of(context).push(createRoute());
+                    // Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const createRoute(),
+                    //   ),
+                    // );
                   },
                   child: TaskWidget(
                       time: '2h 45m',
@@ -466,4 +472,23 @@ class TaskWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+Route createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        const HomePageDetails(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }
