@@ -23,7 +23,7 @@ class HomePageDetails extends StatelessWidget {
                     decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: Colors.black),
                     child: const Icon(
-                      CupertinoIcons.drop_fill,
+                      CupertinoIcons.arrow_down,
                       color: Colors.white,
                     ),
                   ),
@@ -48,13 +48,13 @@ class HomePageDetails extends StatelessWidget {
                 height: 30,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    border: Border.all(color: Colors.black)),
+                    border: Border.all(color: Colors.black, width: 0.5)),
                 child: const Center(
                   child: Text('Sweet Home',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 13,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       )),
                 ),
               ),
@@ -65,7 +65,7 @@ class HomePageDetails extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 54,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   )),
               const SizedBox(
                 height: 20,
@@ -176,7 +176,44 @@ class HomePageDetails extends StatelessWidget {
                     height: 20,
                   )),
                 ],
-              )
+              ),
+              const Spacer(),
+              Center(
+                child: Container(
+                    padding: const EdgeInsets.all(2),
+                    width: MediaQuery.of(context).size.width,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(900),
+                      //  border: Border.all(color: Colors.black)
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.white),
+                          child: const Icon(
+                            Icons.check,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 90,
+                        ),
+                        const Center(
+                          child: Text('Set as done',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                      ],
+                    )),
+              ),
             ],
           ),
         ),
