@@ -84,7 +84,7 @@ class BoardsScreen extends StatelessWidget {
                         width: 40,
                         height: 40,
                         decoration: const BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.black12),
+                            shape: BoxShape.circle, color: Colors.black),
                         child: const Center(
                           child: Text('+3',
                               style: TextStyle(
